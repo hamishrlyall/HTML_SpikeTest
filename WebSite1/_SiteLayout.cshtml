@@ -54,17 +54,69 @@
                 @RenderBody()
             </section>
         </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET Web Page</p>
+        <section>
+            <div>
+                @RenderSection("Scripts", required: false)
+                <!-- Name Heading (Rectangle) -->
+                <div class="float-right" id="u10" data-label="Name Heading">
+                    <div id="u10_div" class=""></div>
+                    <div id="u10_text" class="text ">
+                        <h1>Charles Lilley</h1><p>
+                    </div>
+                    <!-- Profile Photo (Image) -->
+                    <div id="u17" class="ax_default image" data-label="Profile Photo">
+                        <img id="u17_img" class="img " src="~/Images/profile_photo_u17.png" />
+                    </div>
+                    <!-- Born Label (Rectangle) -->
+                    <div id="u16" class="ax_default label" data-label="Born Label">
+                        <div id="u16_div" class=""></div>
+                        <div id="u16_text" class="text ">
+                            <p><span>Born:</span></p>
+                        </div>
+                        <!-- Born Content Label (Rectangle) -->
+                        <div id="u11" class="ax_default label" data-label="Born Content Label">
+                            <div id="u11_div" class=""></div>
+                            <div id="u11_text" class="text ">
+                                <p><span>3 January 1901</span></p><p><span>Tocumwal, NSW</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fate Label (Rectangle) -->
+                    <div id="u15" class="ax_default label" data-label="Fate Label">
+                        <div id="u15_div" class=""></div>
+                        <div id="u15_text" class="text ">
+                            <p><span>Fate:</span></p>
+                        </div>
+                        <!-- Fate Content Label (Rectangle) -->
+                        <div id="u12" class="ax_default label" data-label="Fate Content Label">
+                            <div id="u12_div" class=""></div>
+                            <div id="u12_text" class="text ">
+                                <p><span>Returned to Australia 1 November, 1917, Died 16 June 1982, Heidelberg</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Label (Rectangle) -->
+                    <div id="u14" class="ax_default label" data-label="Service Label">
+                        <div id="u14_div" class=""></div>
+                        <div id="u14_text" class="text ">
+                            <p><span>Service:</span></p>
+                        </div>
+                        <!-- Service Content Label (Rectangle) -->
+                        <div id="u13" class="ax_default label" data-label="Service Content Label">
+                            <div id="u13_div" class=""></div>
+                            <div id="u13_text" class="text ">
+                                <p><span>Field Artillery Brigade 8, Battery 29</span></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
-        @RenderSection("Scripts", required: false)
-
+        </section>
         <!-- Slideshow container -->
-        <div class="slideshow-container">
+        <section>
+        <div id="slideshow" class="slideshow-container">
             <!-- Next and previous buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -72,66 +124,6 @@
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
                 <div class="numbertext">1 / 8</div>
-                <!-- Name Heading (Rectangle) -->
-                <div id="u10" class="ax_default heading_2" data-label="Name Heading">
-                    <div id="u10_div" class=""></div>
-                    <div id="u10_text" class="text ">
-                        <h1>Charles Lilley</h1><p>
-                    </div>
-                </div>
-
-                <!-- Profile Photo (Image) -->
-                <div id="u17" class="ax_default image" data-label="Profile Photo">
-                    <img id="u17_img" class="img " src="~/Images/profile_photo_u17.png" />
-                </div>
-
-                <!-- Born Label (Rectangle) -->
-                <div id="u16" class="ax_default label" data-label="Born Label">
-                    <div id="u16_div" class=""></div>
-                    <div id="u16_text" class="text ">
-                        <p><span>Born:</span></p>
-                    </div>
-                </div>
-
-                <!-- Born Content Label (Rectangle) -->
-                <div id="u11" class="ax_default label" data-label="Born Content Label">
-                    <div id="u11_div" class=""></div>
-                    <div id="u11_text" class="text ">
-                        <p><span>3 January 1901</span></p><p><span>Tocumwal, NSW</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Label (Rectangle) -->
-                <div id="u15" class="ax_default label" data-label="Fate Label">
-                    <div id="u15_div" class=""></div>
-                    <div id="u15_text" class="text ">
-                        <p><span>Fate:</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Content Label (Rectangle) -->
-                <div id="u12" class="ax_default label" data-label="Fate Content Label">
-                    <div id="u12_div" class=""></div>
-                    <div id="u12_text" class="text ">
-                        <p><span>Returned to Australia 1 November, 1917, Died 16 June 1982, Heidelberg</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Label (Rectangle) -->
-                <div id="u14" class="ax_default label" data-label="Service Label">
-                    <div id="u14_div" class=""></div>
-                    <div id="u14_text" class="text ">
-                        <p><span>Service:</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Content Label (Rectangle) -->
-                <div id="u13" class="ax_default label" data-label="Service Content Label">
-                    <div id="u13_div" class=""></div>
-                    <div id="u13_text" class="text ">
-                        <p><span>Field Artillery Brigade 8, Battery 29</span></p>
-                    </div>
-                </div>
 
                 <!-- Main Name Heading (Rectangle) -->
                 <div id="u19" class="ax_default heading_2" data-label="Main Name Heading">
@@ -156,67 +148,7 @@
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">2 / 8</div>
-                <!-- Name Heading (Rectangle) -->
-                <div id="u10" class="ax_default heading_2" data-label="Name Heading">
-                    <div id="u10_div" class=""></div>
-                    <div id="u10_text" class="text ">
-                        <h1>Charles Lilley</h1><p>
-                    </div>
-                </div>
-
-                <!-- Profile Photo (Image) -->
-                <div id="u17" class="ax_default image" data-label="Profile Photo">
-                    <img id="u17_img" class="img " src="~/Images/profile_photo_u17.png" />
-                </div>
-
-                <!-- Born Label (Rectangle) -->
-                <div id="u16" class="ax_default label" data-label="Born Label">
-                    <div id="u16_div" class=""></div>
-                    <div id="u16_text" class="text ">
-                        <p><span>Born:</span></p>
-                    </div>
-                </div>
-
-                <!-- Born Content Label (Rectangle) -->
-                <div id="u11" class="ax_default label" data-label="Born Content Label">
-                    <div id="u11_div" class=""></div>
-                    <div id="u11_text" class="text ">
-                        <p><span>3 January 1901</span></p><p><span>Tocumwal, NSW</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Label (Rectangle) -->
-                <div id="u15" class="ax_default label" data-label="Fate Label">
-                    <div id="u15_div" class=""></div>
-                    <div id="u15_text" class="text ">
-                        <p><span>Fate:</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Content Label (Rectangle) -->
-                <div id="u12" class="ax_default label" data-label="Fate Content Label">
-                    <div id="u12_div" class=""></div>
-                    <div id="u12_text" class="text ">
-                        <p><span>Returned to Australia 1 November, 1917, Died 16 June 1982, Heidelberg</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Label (Rectangle) -->
-                <div id="u14" class="ax_default label" data-label="Service Label">
-                    <div id="u14_div" class=""></div>
-                    <div id="u14_text" class="text ">
-                        <p><span>Service:</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Content Label (Rectangle) -->
-                <div id="u13" class="ax_default label" data-label="Service Content Label">
-                    <div id="u13_div" class=""></div>
-                    <div id="u13_text" class="text ">
-                        <p><span>Field Artillery Brigade 8, Battery 29</span></p>
-                    </div>
-                </div>
-
+              
                 <!-- Main Name Heading (Rectangle) -->
                 <div id="u19" class="ax_default heading_2" data-label="Main Name Heading">
                     <div id="u19_div" class=""></div>
@@ -240,67 +172,7 @@
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">3 / 8</div>
-                <!-- Name Heading (Rectangle) -->
-                <div id="u10" class="ax_default heading_2" data-label="Name Heading">
-                    <div id="u10_div" class=""></div>
-                    <div id="u10_text" class="text ">
-                        <h1>Charles Lilley</h1><p>
-                    </div>
-                </div>
-
-                <!-- Profile Photo (Image) -->
-                <div id="u17" class="ax_default image" data-label="Profile Photo">
-                    <img id="u17_img" class="img " src="~/Images/profile_photo_u17.png" />
-                </div>
-
-                <!-- Born Label (Rectangle) -->
-                <div id="u16" class="ax_default label" data-label="Born Label">
-                    <div id="u16_div" class=""></div>
-                    <div id="u16_text" class="text ">
-                        <p><span>Born:</span></p>
-                    </div>
-                </div>
-
-                <!-- Born Content Label (Rectangle) -->
-                <div id="u11" class="ax_default label" data-label="Born Content Label">
-                    <div id="u11_div" class=""></div>
-                    <div id="u11_text" class="text ">
-                        <p><span>3 January 1901</span></p><p><span>Tocumwal, NSW</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Label (Rectangle) -->
-                <div id="u15" class="ax_default label" data-label="Fate Label">
-                    <div id="u15_div" class=""></div>
-                    <div id="u15_text" class="text ">
-                        <p><span>Fate:</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Content Label (Rectangle) -->
-                <div id="u12" class="ax_default label" data-label="Fate Content Label">
-                    <div id="u12_div" class=""></div>
-                    <div id="u12_text" class="text ">
-                        <p><span>Returned to Australia 1 November, 1917, Died 16 June 1982, Heidelberg</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Label (Rectangle) -->
-                <div id="u14" class="ax_default label" data-label="Service Label">
-                    <div id="u14_div" class=""></div>
-                    <div id="u14_text" class="text ">
-                        <p><span>Service:</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Content Label (Rectangle) -->
-                <div id="u13" class="ax_default label" data-label="Service Content Label">
-                    <div id="u13_div" class=""></div>
-                    <div id="u13_text" class="text ">
-                        <p><span>Field Artillery Brigade 8, Battery 29</span></p>
-                    </div>
-                </div>
-
+               
                 <!-- Main Name Heading (Rectangle) -->
                 <div id="u19" class="ax_default heading_2" data-label="Main Name Heading">
                     <div id="u19_div" class=""></div>
@@ -324,67 +196,7 @@
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">4 / 8</div>
-                <!-- Name Heading (Rectangle) -->
-                <div id="u10" class="ax_default heading_2" data-label="Name Heading">
-                    <div id="u10_div" class=""></div>
-                    <div id="u10_text" class="text ">
-                        <h1>Charles Lilley</h1><p>
-                    </div>
-                </div>
-
-                <!-- Profile Photo (Image) -->
-                <div id="u17" class="ax_default image" data-label="Profile Photo">
-                    <img id="u17_img" class="img " src="~/Images/profile_photo_u17.png" />
-                </div>
-
-                <!-- Born Label (Rectangle) -->
-                <div id="u16" class="ax_default label" data-label="Born Label">
-                    <div id="u16_div" class=""></div>
-                    <div id="u16_text" class="text ">
-                        <p><span>Born:</span></p>
-                    </div>
-                </div>
-
-                <!-- Born Content Label (Rectangle) -->
-                <div id="u11" class="ax_default label" data-label="Born Content Label">
-                    <div id="u11_div" class=""></div>
-                    <div id="u11_text" class="text ">
-                        <p><span>3 January 1901</span></p><p><span>Tocumwal, NSW</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Label (Rectangle) -->
-                <div id="u15" class="ax_default label" data-label="Fate Label">
-                    <div id="u15_div" class=""></div>
-                    <div id="u15_text" class="text ">
-                        <p><span>Fate:</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Content Label (Rectangle) -->
-                <div id="u12" class="ax_default label" data-label="Fate Content Label">
-                    <div id="u12_div" class=""></div>
-                    <div id="u12_text" class="text ">
-                        <p><span>Returned to Australia 1 November, 1917, Died 16 June 1982, Heidelberg</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Label (Rectangle) -->
-                <div id="u14" class="ax_default label" data-label="Service Label">
-                    <div id="u14_div" class=""></div>
-                    <div id="u14_text" class="text ">
-                        <p><span>Service:</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Content Label (Rectangle) -->
-                <div id="u13" class="ax_default label" data-label="Service Content Label">
-                    <div id="u13_div" class=""></div>
-                    <div id="u13_text" class="text ">
-                        <p><span>Field Artillery Brigade 8, Battery 29</span></p>
-                    </div>
-                </div>
-
+               
                 <!-- Main Name Heading (Rectangle) -->
                 <div id="u19" class="ax_default heading_2" data-label="Main Name Heading">
                     <div id="u19_div" class=""></div>
@@ -408,67 +220,6 @@
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">5 / 8</div>
-                <!-- Name Heading (Rectangle) -->
-                <div id="u10" class="ax_default heading_2" data-label="Name Heading">
-                    <div id="u10_div" class=""></div>
-                    <div id="u10_text" class="text ">
-                        <h1>Charles Lilley</h1><p>
-                    </div>
-                </div>
-
-
-                <!-- Profile Photo (Image) -->
-                <div id="u17" class="ax_default image" data-label="Profile Photo">
-                    <img id="u17_img" class="img " src="~/Images/profile_photo_u17.png" />
-                </div>
-
-                <!-- Born Label (Rectangle) -->
-                <div id="u16" class="ax_default label" data-label="Born Label">
-                    <div id="u16_div" class=""></div>
-                    <div id="u16_text" class="text ">
-                        <p><span>Born:</span></p>
-                    </div>
-                </div>
-
-                <!-- Born Content Label (Rectangle) -->
-                <div id="u11" class="ax_default label" data-label="Born Content Label">
-                    <div id="u11_div" class=""></div>
-                    <div id="u11_text" class="text ">
-                        <p><span>3 January 1901</span></p><p><span>Tocumwal, NSW</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Label (Rectangle) -->
-                <div id="u15" class="ax_default label" data-label="Fate Label">
-                    <div id="u15_div" class=""></div>
-                    <div id="u15_text" class="text ">
-                        <p><span>Fate:</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Content Label (Rectangle) -->
-                <div id="u12" class="ax_default label" data-label="Fate Content Label">
-                    <div id="u12_div" class=""></div>
-                    <div id="u12_text" class="text ">
-                        <p><span>Returned to Australia 1 November, 1917, Died 16 June 1982, Heidelberg</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Label (Rectangle) -->
-                <div id="u14" class="ax_default label" data-label="Service Label">
-                    <div id="u14_div" class=""></div>
-                    <div id="u14_text" class="text ">
-                        <p><span>Service:</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Content Label (Rectangle) -->
-                <div id="u13" class="ax_default label" data-label="Service Content Label">
-                    <div id="u13_div" class=""></div>
-                    <div id="u13_text" class="text ">
-                        <p><span>Field Artillery Brigade 8, Battery 29</span></p>
-                    </div>
-                </div>
 
                 <!-- Main Name Heading (Rectangle) -->
                 <div id="u19" class="ax_default heading_2" data-label="Main Name Heading">
@@ -493,68 +244,7 @@
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">6 / 8</div>
-                <!-- Name Heading (Rectangle) -->
-                <div id="u10" class="ax_default heading_2" data-label="Name Heading">
-                    <div id="u10_div" class=""></div>
-                    <div id="u10_text" class="text ">
-                        <h1>Charles Lilley</h1><p>
-                    </div>
-                </div>
-
-
-                <!-- Profile Photo (Image) -->
-                <div id="u17" class="ax_default image" data-label="Profile Photo">
-                    <img id="u17_img" class="img " src="~/Images/profile_photo_u17.png" />
-                </div>
-
-                <!-- Born Label (Rectangle) -->
-                <div id="u16" class="ax_default label" data-label="Born Label">
-                    <div id="u16_div" class=""></div>
-                    <div id="u16_text" class="text ">
-                        <p><span>Born:</span></p>
-                    </div>
-                </div>
-
-                <!-- Born Content Label (Rectangle) -->
-                <div id="u11" class="ax_default label" data-label="Born Content Label">
-                    <div id="u11_div" class=""></div>
-                    <div id="u11_text" class="text ">
-                        <p><span>3 January 1901</span></p><p><span>Tocumwal, NSW</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Label (Rectangle) -->
-                <div id="u15" class="ax_default label" data-label="Fate Label">
-                    <div id="u15_div" class=""></div>
-                    <div id="u15_text" class="text ">
-                        <p><span>Fate:</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Content Label (Rectangle) -->
-                <div id="u12" class="ax_default label" data-label="Fate Content Label">
-                    <div id="u12_div" class=""></div>
-                    <div id="u12_text" class="text ">
-                        <p><span>Returned to Australia 1 November, 1917, Died 16 June 1982, Heidelberg</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Label (Rectangle) -->
-                <div id="u14" class="ax_default label" data-label="Service Label">
-                    <div id="u14_div" class=""></div>
-                    <div id="u14_text" class="text ">
-                        <p><span>Service:</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Content Label (Rectangle) -->
-                <div id="u13" class="ax_default label" data-label="Service Content Label">
-                    <div id="u13_div" class=""></div>
-                    <div id="u13_text" class="text ">
-                        <p><span>Field Artillery Brigade 8, Battery 29</span></p>
-                    </div>
-                </div>
-
+               
                 <!-- Main Name Heading (Rectangle) -->
                 <div id="u19" class="ax_default heading_2" data-label="Main Name Heading">
                     <div id="u19_div" class=""></div>
@@ -573,67 +263,7 @@
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">7 / 8</div>
-                <!-- Name Heading (Rectangle) -->
-                <div id="u10" class="ax_default heading_2" data-label="Name Heading">
-                    <div id="u10_div" class=""></div>
-                    <div id="u10_text" class="text ">
-                        <h1>Charles Lilley</h1><p>
-                    </div>
-                </div>
-
-                <!-- Profile Photo (Image) -->
-                <div id="u17" class="ax_default image" data-label="Profile Photo">
-                    <img id="u17_img" class="img " src="~/Images/profile_photo_u17.png" />
-                </div>
-
-                <!-- Born Label (Rectangle) -->
-                <div id="u16" class="ax_default label" data-label="Born Label">
-                    <div id="u16_div" class=""></div>
-                    <div id="u16_text" class="text ">
-                        <p><span>Born:</span></p>
-                    </div>
-                </div>
-
-                <!-- Born Content Label (Rectangle) -->
-                <div id="u11" class="ax_default label" data-label="Born Content Label">
-                    <div id="u11_div" class=""></div>
-                    <div id="u11_text" class="text ">
-                        <p><span>3 January 1901</span></p><p><span>Tocumwal, NSW</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Label (Rectangle) -->
-                <div id="u15" class="ax_default label" data-label="Fate Label">
-                    <div id="u15_div" class=""></div>
-                    <div id="u15_text" class="text ">
-                        <p><span>Fate:</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Content Label (Rectangle) -->
-                <div id="u12" class="ax_default label" data-label="Fate Content Label">
-                    <div id="u12_div" class=""></div>
-                    <div id="u12_text" class="text ">
-                        <p><span>Returned to Australia 1 November, 1917, Died 16 June 1982, Heidelberg</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Label (Rectangle) -->
-                <div id="u14" class="ax_default label" data-label="Service Label">
-                    <div id="u14_div" class=""></div>
-                    <div id="u14_text" class="text ">
-                        <p><span>Service:</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Content Label (Rectangle) -->
-                <div id="u13" class="ax_default label" data-label="Service Content Label">
-                    <div id="u13_div" class=""></div>
-                    <div id="u13_text" class="text ">
-                        <p><span>Field Artillery Brigade 8, Battery 29</span></p>
-                    </div>
-                </div>
-
+               
                 <!-- Main Name Heading (Rectangle) -->
                 <div id="u19" class="ax_default heading_2" data-label="Main Name Heading">
                     <div id="u19_div" class=""></div>
@@ -652,68 +282,7 @@
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">8 / 8</div>
-                <!-- Name Heading (Rectangle) -->
-                <div id="u10" class="ax_default heading_2" data-label="Name Heading">
-                    <div id="u10_div" class=""></div>
-                    <div id="u10_text" class="text ">
-                        <h1>Charles Lilley</h1><p>
-                    </div>
-                </div>
-
-
-                <!-- Profile Photo (Image) -->
-                <div id="u17" class="ax_default image" data-label="Profile Photo">
-                    <img id="u17_img" class="img " src="~/Images/profile_photo_u17.png" />
-                </div>
-
-                <!-- Born Label (Rectangle) -->
-                <div id="u16" class="ax_default label" data-label="Born Label">
-                    <div id="u16_div" class=""></div>
-                    <div id="u16_text" class="text ">
-                        <p><span>Born:</span></p>
-                    </div>
-                </div>
-
-                <!-- Born Content Label (Rectangle) -->
-                <div id="u11" class="ax_default label" data-label="Born Content Label">
-                    <div id="u11_div" class=""></div>
-                    <div id="u11_text" class="text ">
-                        <p><span>3 January 1901</span></p><p><span>Tocumwal, NSW</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Label (Rectangle) -->
-                <div id="u15" class="ax_default label" data-label="Fate Label">
-                    <div id="u15_div" class=""></div>
-                    <div id="u15_text" class="text ">
-                        <p><span>Fate:</span></p>
-                    </div>
-                </div>
-
-                <!-- Fate Content Label (Rectangle) -->
-                <div id="u12" class="ax_default label" data-label="Fate Content Label">
-                    <div id="u12_div" class=""></div>
-                    <div id="u12_text" class="text ">
-                        <p><span>Returned to Australia 1 November, 1917, Died 16 June 1982, Heidelberg</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Label (Rectangle) -->
-                <div id="u14" class="ax_default label" data-label="Service Label">
-                    <div id="u14_div" class=""></div>
-                    <div id="u14_text" class="text ">
-                        <p><span>Service:</span></p>
-                    </div>
-                </div>
-
-                <!-- Service Content Label (Rectangle) -->
-                <div id="u13" class="ax_default label" data-label="Service Content Label">
-                    <div id="u13_div" class=""></div>
-                    <div id="u13_text" class="text ">
-                        <p><span>Field Artillery Brigade 8, Battery 29</span></p>
-                    </div>
-                </div>
-
+           
                 <!-- Main Name Heading (Rectangle) -->
                 <div id="u19" class="ax_default heading_2" data-label="Main Name Heading">
                     <div id="u19_div" class=""></div>
@@ -732,13 +301,23 @@
             </div>
 
         </div>
-        <br>
+        </section>
+        <footer>
+            <div class="content-wrapper">
+                <br>
 
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

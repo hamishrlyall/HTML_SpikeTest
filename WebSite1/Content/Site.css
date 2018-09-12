@@ -22,27 +22,28 @@ body {
 /* Slideshow container */
 .slideshow-container {
     max-width: 1000000px;
+    max-height: none;
     position: relative;
     margin: auto;
 }
 
 /* Hide the images by default */
 .mySlides {
-    display: none;
+    display: initial;
 }
 
 /* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 100%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
     color: white;
     font-weight: bold;
     font-size: 18px;
-    transition: 0.6s ease;
+    transition: linear;
     border-radius: 0 3px 3px 0;
 }
 
@@ -59,13 +60,13 @@ body {
 
 /* Caption text */
 .text {
-    color: #f2f2f2;
+    color: #000;
     font-size: 15px;
     padding: 8px 12px;
-    position: absolute;
+    position: static;
     bottom: 8px;
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
 /* Number text (1/3 etc) */
@@ -90,7 +91,7 @@ body {
 }
 
     .active, .dot:hover {
-        background-color: #717171;
+        background-color: #999;
     }
 
 /* Fading animation */
@@ -310,6 +311,9 @@ ul#menu {
             color: #333;
             text-decoration: none;
         }
+
+/* postcard
+    -------------------------------------------------------*/
 
 
 /* page elements
